@@ -1,0 +1,11 @@
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="main-breadcrumb">
+              <ol class="breadcrumb">
+                  <li class="breadcrumb-item"> <a *ngIf="!loginService.isLoggedIn()" [routerLink]="'/signup'">Registration</a></li>
+                  <li class="breadcrumb-item"><a *ngIf="!loginService.isLoggedIn()" [routerLink]="'/login'" >Login</a></li>
+                  <li class="breadcrumb-item"><a [routerLink]="'/enquery'">Enquiry Form</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                  <li class="breadcrumb-item"><a (click)="logOut()" >LOG OUT</a></li>
+                  
+              </ol>
+          </nav>
